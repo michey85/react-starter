@@ -42,7 +42,11 @@ export default tseslint.config(
       ...eslintConfigPrettier.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'prefer-const': 'error',
-      'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'never' }]
+      'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'never' }],
+      'react/function-component-definition': ['warn', { namedComponents: 'arrow-function' }],
+      'react/no-unstable-nested-components': ['warn', { allowAsProps: false }],
+      'react/self-closing-comp': ['error', { component: true, html: true }],
+      'max-lines': ['warn', { max: 124 }],
     },
   },
 );
