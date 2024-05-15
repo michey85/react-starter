@@ -42,6 +42,7 @@ export default tseslint.config(
       ...eslintConfigPrettier.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'prefer-const': 'error',
+      'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'never' }]
     },
   },
 );
