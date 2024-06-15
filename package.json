@@ -10,14 +10,26 @@
     "lint:fix": "eslint . --ext js,jsx --fix && stylelint '**/*.css' --fix",
     "preview": "vite preview",
     "prettier": "prettier . --check --ignore-unknown",
-    "prettier:fix": "prettier . -w"
+    "prettier:fix": "prettier . -w",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.0",
     "ramda": "^0.30.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
+    "@storybook/addon-essentials": "^8.1.9",
+    "@storybook/addon-interactions": "^8.1.9",
+    "@storybook/addon-links": "^8.1.9",
+    "@storybook/addon-onboarding": "^8.1.9",
+    "@storybook/blocks": "^8.1.9",
+    "@storybook/react": "^8.1.9",
+    "@storybook/react-vite": "^8.1.9",
+    "@storybook/test": "^8.1.9",
     "@types/ramda": "^0.30.0",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
@@ -28,8 +40,10 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-storybook": "^0.8.0",
     "globals": "^15.2.0",
     "prettier": "^3.2.5",
+    "storybook": "^8.1.9",
     "stylelint": "^16.5.0",
     "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.4.5",
@@ -41,5 +55,10 @@
   },
   "volta": {
     "node": "22.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }

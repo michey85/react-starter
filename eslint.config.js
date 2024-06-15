@@ -6,6 +6,7 @@ import eslintReactHooks from 'eslint-plugin-react-hooks';
 import eslintReactRefresh from 'eslint-plugin-react-refresh';
 import prettierPlugin from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintStorybook from 'eslint-plugin-storybook';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default tseslint.config(
@@ -16,6 +17,7 @@ export default tseslint.config(
       'react-hooks': eslintReactHooks,
       'react-refresh': eslintReactRefresh,
       prettier: prettierPlugin,
+      storybook: eslintStorybook,
     },
   },
   {
@@ -36,7 +38,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}'],
     rules: {
       ...prettierPlugin.configs.recommended.rules,
       ...eslintConfigPrettier.rules,
