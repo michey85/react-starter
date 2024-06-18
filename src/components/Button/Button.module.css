@@ -68,12 +68,12 @@
 }
 
 .topAccent {
-  border-top: 4px solid currentColor;
+  border-top: 4px solid purple;
   border-radius: 0;
 }
 
 .leftAccent {
-  border-left: 4px solid currentColor;
+  border-left: 4px solid purple;
   border-radius: 0;
 }
 

@@ -9,7 +9,7 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {
-    label: 'Click me',
+    children: 'Click me',
   },
 } satisfies Meta<typeof Button>;
 
@@ -19,6 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     variant: 'primary',
+    size: 'medium',
   },
 };
 
