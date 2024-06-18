@@ -66,3 +66,23 @@
   background-color: #cccccc;
   color: #666666;
 }
+
+.topAccent {
+  border-top: 4px solid currentColor;
+  border-radius: 0;
+}
+
+.leftAccent {
+  border-left: 4px solid currentColor;
+  border-radius: 0;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+}
+
+.arrow::after {
+  content: '\2192';
+  margin-left: 1em;
+}
