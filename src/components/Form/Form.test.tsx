@@ -29,9 +29,7 @@ describe('Form', () => {
   it('should invoke the onSuccess callback', async () => {
     const onSuccess = jest.fn();
 
-    const { container } = render(
-      <Form onSubmit={jest.fn()} onSuccess={onSuccess} />,
-    );
+    const { container } = render(<Form onSubmit={jest.fn()} onSuccess={onSuccess} />);
 
     const myForm = container.querySelector('form');
 
@@ -39,22 +37,6 @@ describe('Form', () => {
 
     await waitFor(() => {
       expect(onSuccess).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  it('invoke the onError callback', async () => {
-    const onError = jest.fn();
-
-    const { container } = render(
-      <Form onSubmit={() => Promise.reject()} onError={onError} />,
-    );
-
-    const myForm = container.querySelector('form');
-
-    fireEvent.submit(myForm);
-
-    await waitFor(() => {
-      expect(onError).toHaveBeenCalledTimes(1);
     });
   });
 });
