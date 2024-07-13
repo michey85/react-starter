@@ -3,7 +3,7 @@ import style from './Form.module.css';
 import { ComponentProps } from 'react';
 
 type FormProps = {
-  onSubmit: (data: Record<string, string>) => void;
+  onSubmit?: (data: Record<string, string>) => void;
   onSuccess?: (data: Record<string, string>) => void;
   onError?: (error: Error) => void;
   children: React.ReactNode;
@@ -17,7 +17,9 @@ const Form = ({ onSubmit, onSuccess, onError, children, className }: FormProps) 
     const data = Object.fromEntries(formData.entries()) as Record<string, string>;
 
     try {
-      await onSubmit(data);
+      if (onSubmit) {
+        await onSubmit(data);
+      }
       onSuccess && onSuccess(data);
     } catch (error: unknown) {
       if (error instanceof Error) onError && onError(error);
