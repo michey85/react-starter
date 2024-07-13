@@ -2,9 +2,9 @@
 const config = {
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.{js,jsx}',
-    '!src/**/index.js',
-    '!src/main.jsx',
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/index.ts',
+    '!src/main.tsx',
   ],
   coverageDirectory: 'coverage',
   testEnvironment: 'jsdom',

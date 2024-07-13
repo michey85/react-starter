@@ -2,7 +2,14 @@ import cn from 'clsx';
 
 import style from './Text.module.css';
 
-const Text = ({ children, className, isError, isSuccess }) => {
+type TextProps = {
+  children: React.ReactNode;
+  className?: string;
+  isError?: boolean;
+  isSuccess?: boolean;
+};
+
+const Text = ({ children, className, isError, isSuccess }: TextProps) => {
   return (
     <p
       className={cn(style.text, className, {

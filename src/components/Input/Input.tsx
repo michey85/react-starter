@@ -1,7 +1,14 @@
-import { useId } from 'react';
+import { ComponentProps, useId } from 'react';
 import cn from 'clsx';
 
 import style from './Input.module.css';
+
+type InputProps = {
+  type?: 'text' | 'password' | 'email' | 'checkbox' | 'submit';
+  label?: string;
+  containerClassName?: string;
+  inputClassName?: string;
+} & ComponentProps<'input'>;
 
 const Input = ({
   type = 'text',
@@ -12,7 +19,7 @@ const Input = ({
   label,
   containerClassName,
   inputClassName,
-}) => {
+}: InputProps) => {
   const id = useId();
 
   return (
