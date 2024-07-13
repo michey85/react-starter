@@ -1,0 +1,35 @@
+.input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.input.invalid {
+  border-color: red;
+  background-color: #ffd7d7;
+}
+
+.input.valid {
+  border-color: green;
+  background-color: #d7ffd7;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.formControl {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
